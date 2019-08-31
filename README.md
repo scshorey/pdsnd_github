@@ -10,6 +10,6 @@ Describe what your project is about and what it does
 ### bikeshare.py, chicago.csv, new_york_city.csv, washington.csv
 Include the files used
 
-### Credits
+### Geeksforgeeks.com - helped with pandas - https://www.geeksforgeeks.org/create-a-pandas-dataframe-from-lists/
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
