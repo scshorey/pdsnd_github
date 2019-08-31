@@ -1,13 +1,13 @@
-### Date created
+### 8/30/19
 Include the date you created this project and README file.
 
-### Project Title
+### Bikeshare Interactive Dataset
 Replace the Project Title
 
-### Description
+### This project was intended to make it easy for other users to query multiple bikeshare data files and get specific data points depending on their filtering of city, month and day of week
 Describe what your project is about and what it does
 
-### Files used
+### bikeshare.py
 Include the files used
 
 ### Credits
