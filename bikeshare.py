@@ -170,6 +170,7 @@ def user_stats(df):
         print(f"Youngest User Birth Year: {int(df['Birth Year'].max())}")
         print(f"Most Common User Birth Year: {int(df['Birth Year'].mode()[0])}")
     except KeyError:
+        print("Washington data doesn't have Birth Year")
         pass
 
     print("\nThis took %s seconds." % (time.time() - start_time))
