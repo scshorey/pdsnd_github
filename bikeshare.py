@@ -122,7 +122,7 @@ def station_stats(df):
    
 
     # TO DO: display most frequent combination of start station and end station trip
-    df2 = pd.DataFrame({"combo_station": df['Start Station'].map(str) + " to " + df['End Station']})  
+    df2 = pd.DataFrame({"combo_station": "from " + df['Start Station'].map(str) + " to " + df['End Station']})  
     print(f"Most popular station combination: {df2['combo_station'].mode()[0]}")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -170,7 +170,7 @@ def user_stats(df):
         print(f"Youngest User Birth Year: {int(df['Birth Year'].max())}")
         print(f"Most Common User Birth Year: {int(df['Birth Year'].mode()[0])}")
     except KeyError:
-        print("Washington data doesn't have Birth Year")
+        print(f"Washington data doesn't have Birth Year")
         pass
 
     print("\nThis took %s seconds." % (time.time() - start_time))
