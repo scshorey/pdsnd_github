@@ -92,7 +92,9 @@ def time_stats(df):
     start_time = time.time()
 
     # TO DO: display the most common month
-    print(f"Most popular month: {df['month'].mode()[0]}")
+    monthnames = list(MONTHS_INDEX.keys())
+    popular_month = monthnames[df['month'].mode()[0] - 1].title()
+    print(f"Most popular month: {popular_month}")
 
     # TO DO: display the most common day of week
     print(f"Most popular day: {df['day_of_week'].mode()[0]}")
@@ -120,7 +122,7 @@ def station_stats(df):
    
 
     # TO DO: display most frequent combination of start station and end station trip
-    df2 = pd.DataFrame({"combo_station": df['Start Station'].map(str) + " to " + df['End Station']})  
+    df2 = pd.DataFrame({"combo_station": "from " + df['Start Station'].map(str) + " to " + df['End Station']})  
     print(f"Most popular station combination: {df2['combo_station'].mode()[0]}")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -168,6 +170,7 @@ def user_stats(df):
         print(f"Youngest User Birth Year: {int(df['Birth Year'].max())}")
         print(f"Most Common User Birth Year: {int(df['Birth Year'].mode()[0])}")
     except KeyError:
+        print(f"Washington data doesn't have Birth Year")
         pass
 
     print("\nThis took %s seconds." % (time.time() - start_time))
